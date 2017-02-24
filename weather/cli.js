@@ -32,8 +32,8 @@ function _toCelcius(temp) {
 
 updateNotifier({ pkg}).notify();
 
-// Function that display on the console the Country, Condition, Temperature
-// In function of the sql request passed in index.js
+// Function that display the Country, Condition, Temperature
+// in function of the sql request passed in index.js
 weather(cli.input, (err, result) => {
 	if (err) {
 		console.log(chalk.bold.red(err));
