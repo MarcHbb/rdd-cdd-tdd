@@ -25,12 +25,15 @@ const cli = meow({
 	]
 });
 
+// Function to convert Faraneiht to Celsius
 function _toCelcius(temp) {
 	return Math.round(((temp - 32) * 5) / 9);
 }
 
 updateNotifier({ pkg}).notify();
 
+// Function that display on the console the Country, Condition, Temperature
+// In function of the sql request passed in index.js
 weather(cli.input, (err, result) => {
 	if (err) {
 		console.log(chalk.bold.red(err));
